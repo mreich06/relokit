@@ -20,5 +20,5 @@ export default auth((req) => {
 
 export const config = {
   // Protect everything except static assets, home page, and auth API routes
-  matcher: ['/dashboard/:path*', '/profile/:path*', '/settings/:path*'],
+  matcher: ['/login', '/dashboard/:path*', '/profile/:path*', '/settings/:path*'],
 };
