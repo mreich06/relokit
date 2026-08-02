@@ -1,6 +1,8 @@
 import { auth } from '@/auth';
 import { NextResponse } from 'next/server';
 
+// middleware to protect routes - login, dashboard, profile and settings
+// runs on Edge runtime so auth() wrapper needed since it does not fully support Node js APIs
 export default auth((req) => {
   const isLoggedIn = !!req.auth;
   const isAuthPage = req.nextUrl.pathname === '/login';
