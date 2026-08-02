@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "cp src/generated/prisma/libquery_engine-rhel-openssl-3.0.x.so.node .next/standalone/src/generated/prisma/ || true",
     "start": "next start",
     "lint": "eslint"
   },
