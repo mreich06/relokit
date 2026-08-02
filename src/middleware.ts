@@ -1,5 +1,9 @@
-import { auth } from '@/auth';
 import { NextResponse } from 'next/server';
+import { authConfig } from './auth.config';
+import NextAuth from 'next-auth';
+
+// Initialize a lightweight instance for the Edge runtime
+const { auth } = NextAuth(authConfig);
 
 // middleware to protect routes - login, dashboard, profile and settings
 // runs on Edge runtime so auth() wrapper needed since it does not fully support Node js APIs
